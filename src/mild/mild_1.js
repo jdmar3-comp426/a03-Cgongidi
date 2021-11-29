@@ -9,8 +9,8 @@
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
  */
 export function sumToString(a, b) {
-    var sum = a + b
-    return(`${a} + ${b} = ${sum}`)
+    var sum = a + b;
+    return(`${a} + ${b} = ${sum}`);
 }
 
 
@@ -25,7 +25,11 @@ export function sumToString(a, b) {
  *
  */
 export function getIncreasingArray(startNumber, endNumber) {
-
+    var array = [startNumber];
+    for(let i = 0; i <= endNumber; i++) {
+        array.push(startNumber + 1);
+    }
+    return array;
 }
 
 /**
