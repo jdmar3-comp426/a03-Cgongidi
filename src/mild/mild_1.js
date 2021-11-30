@@ -42,7 +42,7 @@ export function getIncreasingArray(startNumber, endNumber) {
 export function maxAndMin(numbers) {
     var min = Math.min(...numbers);
     var max = Math.max(...numbers);
-    return `{ max: ${max}}, min: ${min} }`;
+    return `{ max: ${max}, min: ${min} }`;
 }
 
 /**
@@ -56,10 +56,7 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-    var arSet = {}
-    for(let i = 0; i < array.length; i++) {
-        if(arSet[array[i]] == undefined) {arSet[array[i]] = 1}
-        else {arSet[array[i]] += 1;}
-    }
-    return(returnSet)
+    const set = {};
+    for(const i of array) {set[i] = set[i] ? set[i] + 1 : 1;}
+    return set;
 }
