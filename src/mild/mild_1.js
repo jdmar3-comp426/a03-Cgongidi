@@ -40,10 +40,9 @@ export function getIncreasingArray(startNumber, endNumber) {
  * and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
  */
 export function maxAndMin(numbers) {
-    const min = Math.min.apply(null, numbers);
-    const max = Math.max.apply(null, numbers);
-    var set = new Set(min, max)
-    return(set);
+    var min = Math.min(...numbers);
+    var max = Math.max(...numbers);
+    return(`{ max: ${max}}, min: ${min} }`);
 }
 
 /**
@@ -57,10 +56,10 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-    var arSet = new Set(array)
-    var returnSet = new Set()
-    for(let j = 0; j < arSet.length; j++) {
-        returnSet.add(`'${arSet[j]}':${array.helper(j)}`)
+    var arSet = {}
+    for(let i = 0; i < array.length; i++) {
+        if(arSet[array[i]] == undefined) {arSet[array[i]] = 1}
+        else {arSet[array[i]] += 1;}
     }
     return(returnSet)
 }
