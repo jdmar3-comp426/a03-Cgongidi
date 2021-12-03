@@ -51,14 +51,14 @@ export function getMedian(array) {
 export function getStatistics(array) {
     const statisticsObj = new Object();
     let mean = getSum(array)/array.length;
-    let variance = variance(array, mean);
+    let obj_variance = variance(array, mean);
     statisticsObj.length = array.length;
     statisticsObj.sum = getSum(array);
     statisticsObj.mean = mean;
     statisticsObj.median = getMedian(array);
     statisticsObj.min = array[0];
     statisticsObj.max = array[array.length-1];
-    statisticsObj.variance = variance(array, mean);
+    statisticsObj.variance = obj_variance
     statisticsObj.standard_deviation = Math.sqrt(variance);
     return obj;
 }
