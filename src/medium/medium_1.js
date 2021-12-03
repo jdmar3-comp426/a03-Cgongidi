@@ -56,8 +56,8 @@ export function getStatistics(array) {
     statisticsObj.sum = getSum(array);
     statisticsObj.mean = mean;
     statisticsObj.median = getMedian(array);
-    statisticsObj.min = array[0];
-    statisticsObj.max = array[array.length-1];
+    statisticsObj.min = Math.min(...array);
+    statisticsObj.max = Math.max(...array);
     statisticsObj.variance = obj_variance
     statisticsObj.standard_deviation = Math.sqrt(obj_variance);
     return statisticsObj;
