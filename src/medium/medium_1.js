@@ -60,6 +60,6 @@ export function getStatistics(array) {
     statisticsObj.max = array[array.length-1];
     statisticsObj.variance = obj_variance
     statisticsObj.standard_deviation = Math.sqrt(variance);
-    return obj;
+    return statisticsObj;
 }
 
