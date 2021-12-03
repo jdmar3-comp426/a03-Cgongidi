@@ -59,7 +59,7 @@ export function getStatistics(array) {
     statisticsObj.min = array[0];
     statisticsObj.max = array[array.length-1];
     statisticsObj.variance = obj_variance
-    statisticsObj.standard_deviation = Math.sqrt(variance);
+    statisticsObj.standard_deviation = Math.sqrt(obj_variance);
     return statisticsObj;
 }
 
